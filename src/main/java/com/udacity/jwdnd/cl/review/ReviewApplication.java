@@ -12,21 +12,5 @@ public class ReviewApplication {
 		SpringApplication.run(ReviewApplication.class, args);
 	}
 
-	@Bean
-	public String message() {
-		System.out.println("Creating a Bean");
-		return "Hello, Spring!!";
-	}
 
-	@Bean
-	public String uppercaseMessage(MessageService messageService) {
-		System.out.println("Creating UppercaseMessage Bean");
-		return message().toUpperCase();
-	}
-
-	@Bean
-	public String lowercaseMessage(MessageService messageService) {
-		System.out.println("Creating UppercaseMessage Bean");
-		return message().toLowerCase();
-	}
 }
